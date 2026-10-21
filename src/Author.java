@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Author {
@@ -18,6 +19,8 @@ public class Author {
         for (Title t : this.titles){
             sum += t.calculateRoyalty();
         }
+        sum = Math.round(sum*100);
+        sum /= 100;
         return sum;
     }
 
