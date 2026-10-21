@@ -9,17 +9,20 @@ public class Author {
         this.titles = new ArrayList<>();
     }
 
-    public void addTitle(){
-
+    public void addTitle(Title title){
+        this.titles.add(title);
     }
 
     public double calculateRoyalties(){
-
+        double sum = 0;
+        for (Title t : this.titles){
+            sum += t.calculateRoyalty();
+        }
+        return sum;
     }
 
     public String getName(){
-
-
+        return this.name;
     }
 
 }
