@@ -1,11 +1,9 @@
-public class PrintedBook extends Title{
+public class PrintedBook extends PhysicalTitle{
     int pages;
-    int copies;
 
     public PrintedBook(String title, String literatureType, int pages, int copies){
-        super(title,literatureType);
+        super(title, literatureType, copies);
         this.pages = pages;
-        this.copies = copies;
     }
 
     @Override

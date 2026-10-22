@@ -1,4 +1,4 @@
-public class EAudioBook extends NetTitle{
+public class EAudioBook extends NetTitle implements IAudioBook{
     private int durationInMinutes;
 
     public EAudioBook(String title, String literatureType, int availability, int reach, int use, int durationInMinutes){
@@ -9,5 +9,9 @@ public class EAudioBook extends NetTitle{
     @Override
     protected double calculatePoints(){
         return ((double) durationInMinutes / 2) * convertLiteratureType() * (getPseudoCopies() * getUseFactor());
+    }
+
+    public int getDurationInMinutes(){
+        return durationInMinutes;
     }
 }

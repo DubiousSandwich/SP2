@@ -24,9 +24,11 @@ public abstract class Title {
                 default -> throw new IllegalArgumentException();
             }
         } catch (IllegalArgumentException e){
-            System.out.println(e.getMessage());
+            System.out.println("\nInvalid literature type for title: \"" + title
+                    + "\" type: " + literatureType + "\n"
+                    + "Title has not been included in calculation\n");
+            return 0;
         }
-        return 0;
     }
 
 }
