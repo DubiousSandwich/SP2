@@ -1,4 +1,4 @@
-public class AudioBook extends Title{
+public class AudioBook extends Title implements IAudioBook{
     int durationInMinutes;
     int copies;
 
@@ -11,5 +11,10 @@ public class AudioBook extends Title{
     @Override
     protected double calculatePoints(){
         return (durationInMinutes *0.5) * convertLiteratureType() * copies;
+    }
+
+    @Override
+    public int getDurationInMinutes(){
+        return durationInMinutes;
     }
 }
