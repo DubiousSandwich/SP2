@@ -9,9 +9,10 @@ public class Main {
 
         Title a4 = new EBook("1984","TE",97,30,205,8000,true);
         Title a5 = new EAudioBook("Animal Farm", "LYRIK",97,40,50,120);
+        Title a7 = new EBook("1984","BI",97,30,205,8000,false);
 
         //exception check
-        Title a6 = new EBook("1984","TQ",97,30,205,8000,true);
+        Title a6 = new EBook("1984","TQ",97,30,205,8000,false);
 
         a.addTitle(a1);
         a.addTitle(a2);
@@ -33,6 +34,10 @@ public class Main {
 
         System.out.println(a4.calculatePoints());
         System.out.println(a4.calculateRoyalty());
+
+        //illustrated vs nonIllustrated
+        System.out.println(a4.calculatePoints());
+        System.out.println(a7.calculatePoints());
 
 
     }
