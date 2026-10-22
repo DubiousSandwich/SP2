@@ -21,10 +21,18 @@ public class Main {
 
         b.addTitle(a4);
         b.addTitle(a5);
-        b.addTitle(a6);
+        //b.addTitle(a6);
 
         System.out.println(a.getName() + ": " + a.calculateRoyalties() + " kr");
         System.out.println(b.getName() + ": " + b.calculateRoyalties() + " kr");
+
+        System.out.println("\n====================== test ===================");
+
+        System.out.println(a1.calculatePoints());
+        System.out.println(a1.calculateRoyalty());
+
+        System.out.println(a4.calculatePoints());
+        System.out.println(a4.calculateRoyalty());
 
 
     }
