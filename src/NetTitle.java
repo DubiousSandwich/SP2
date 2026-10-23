@@ -11,10 +11,10 @@ public abstract class NetTitle extends Title{
     }
 
     protected double getPseudoCopies(){
-        return (reach * 5) + (availability * 0.5);
+        return ((reach * 5) + (availability * 0.5)) + getUseFactor();
     }
 
-    protected int getUseFactor(){
+    private int getUseFactor(){
         return use;
     }
 }
